@@ -1,0 +1,70 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Car Animation</title>
+
+    <script src="jquery-4.0.0.min.js"></script>
+
+    <style>
+        #road {
+            width: 800px;
+            height: 300px;
+            background-color: lightgreen;
+            position: relative;
+            border: 2px solid black;
+        }
+
+        #car {
+            width: 120px;
+            position: absolute;
+            left: 0px;
+            bottom: 20px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+
+            $(document).keydown(function(event) {
+
+                // Right arrow key
+                if (event.key == "ArrowRight") {
+                    $('#car').animate({
+                        left: "+=50px"
+                    }, 300);
+                }
+
+                // Left arrow key
+                if (event.key == "ArrowLeft") {
+                    $('#car').animate({
+                        left: "-=50px"
+                    }, 300);
+                }
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <h2>Car Animation Using Keydown Event</h2>
+
+    <p>
+        Press ← Left Arrow or → Right Arrow to move the car.
+    </p>
+
+    <div id="road">
+        <img id="car" src="car.jng" alt="Car">
+    </div>
+
+</body>
+
+</html>
+```

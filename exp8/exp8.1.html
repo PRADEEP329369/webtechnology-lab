@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Comment Box</title>
+  <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+</head>
+<body ng-app="commentApp">
+  <div id="dv1">
+    <div ng-controller="FrmController">
+      <h3>Post your Comment</h3>
+      <textarea ng-model="txtcomment" placeholder="Your Comment" style="width: 550px; height: 80px;"></textarea><br>
+      <button ng-click="btn_add();" style="margin-top: 10px;">Post Comment</button>
+      
+      <h4>Comments</h4>
+      <ul>
+        <li ng-repeat="comnt in comment track by $index">
+          {{ comnt }}
+          <a style="float: right; cursor: pointer; color: red;" href="" ng-click="remitem($index)">x</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    var app = angular.module("commentApp", []);
+    app.controller("FrmController", function($scope) {
+      $scope.comment = [];
+      $scope.btn_add = function() {
+        if ($scope.txtcomment && $scope.txtcomment.trim() !== "") {
+          $scope.comment.push($scope.txtcomment);
+          $scope.txtcomment = "";
+        }
+      };
+      $scope.remitem = function($index) {
+        $scope.comment.splice($index, 1);
+      };
+    });
+  </script>
+</body>
+</html>

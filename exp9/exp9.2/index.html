@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>TechAcademy - AngularJS Portal</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #f0f2f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: white;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    nav {
+      background-color: #0d1b2a;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: #e0e1dd;
+      text-decoration: none;
+      padding: 15px 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+    }
+    nav a:hover {
+      background-color: #1b263b;
+      color: #778da9;
+      border-bottom: 3px solid #778da9;
+    }
+    .main-wrapper {
+      flex: 1;
+      padding: 30px 15px;
+    }
+    .container {
+      background: #ffffff;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    footer {
+      background-color: #0d1b2a;
+      color: #778da9;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.85rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Web Tech Academy</h1>
+  </header>
+
+  <nav>
+    <a href="#!/">Home</a>
+    <a href="#!about">About Us</a>
+    <a href="#!media">Media</a>
+    <a href="#!feedback">Feedback</a>
+  </nav>
+
+  <div class="main-wrapper">
+    <div class="container">
+      <div ng-view></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Web Tech Academy. Built with AngularJS.</p>
+  </footer>
+
+  <script>
+    var app = angular.module("myApp", ["ngRoute"]);
+    
+    app.config(function($routeProvider) {
+      $routeProvider
+        .when("/", {
+          templateUrl: "home.html"
+        })
+        .when("/about", {
+          templateUrl: "about.html"
+        })
+        .when("/media", {
+          templateUrl: "media.html"
+        })
+        .when("/feedback", {
+          templateUrl: "feedback.html"
+        })
+        .otherwise({
+          redirectTo: "/"
+        });
+    });
+  </script>
+
+</body>
+</html>

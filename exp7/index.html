@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Workshop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #car {
+            width: 300px;
+            height: 120px;
+            background-color: red;
+            margin: 30px;
+            position: relative;
+        }
+        .wheel {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -25px;
+        }
+        #w1 {
+            left: 30px;
+        }
+        #w2 {
+            right: 30px;
+        }
+        #glass {
+            background-color: lightblue;
+            width: 100px;
+            height: 40px;
+            margin: 20px auto;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#color").change(function() {
+                $("#car").css("background-color", $(this).val());
+            });
+            $("#tint").change(function() {
+                $("#glass").css("background-color", $(this).val());
+            });
+            $("#size").change(function() {
+                let size = $(this).val();
+                $(".wheel").css({
+                    "width": size + "px",
+                    "height": size + "px"
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<h2>Car Body Workshop</h2>
+Car Color:
+<select id="color">
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="black">Black</option>
+</select>
+<br><br>
+Glass Tint:
+<select id="tint">
+    <option value="lightblue">Light Blue</option>
+    <option value="gray">Gray</option>
+    <option value="black">Black</option>
+</select>
+<br><br>
+Tyre Size:
+<select id="size">
+    <option value="50">Small</option>
+    <option value="70">Medium</option>
+    <option value="90">Large</option>
+</select>
+<div id="car">
+    <div id="glass"></div>
+    <div id="w1" class="wheel"></div>
+    <div id="w2" class="wheel"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+</head>
+<body>
+<h3>Reg No: URK24CS1182</h3>
+<fieldset>
+    Convert
+    <input type="text" id="data">
+    <select id="from">
+        <option>Indian Rupee</option>
+        <option>US Dollar</option>
+    </select>
+    to
+    <select id="to">
+        <option>US Dollar</option>
+        <option>Indian Rupee</option>
+    </select>
+    <button onclick="convert()">Calculate</button>
+    <span id="answer"></span>
+</fieldset>
+<script>
+function convert() {
+    let data = parseFloat(document.getElementById("data").value);
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let result;
+    if (from == "Indian Rupee" && to == "US Dollar") {
+        result = data * 0.015;
+    }
+    else if (from == "US Dollar" && to == "Indian Rupee") {
+        result = data * 67.12;
+    }
+    else {
+        result = data;
+    }
+    document.getElementById("answer").innerHTML =
+        " Result: " + result.toFixed(2);
+}
+</script>
+</body>
+</html>

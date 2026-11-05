@@ -1,0 +1,67 @@
+<style>
+  .form-container h2 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+  }
+  .form-group {
+    margin-bottom: 18px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #2d3748;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #2a5298;
+    outline: none;
+  }
+  .submit-btn {
+    background: #2a5298;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  .submit-btn:hover {
+    background: #1e3c72;
+  }
+</style>
+
+<div class="form-container">
+  <h2>Student Feedback Form</h2>
+  <form onsubmit="alert('Thank you for your feedback!'); return false;">
+    
+    <div class="form-group">
+      <label for="studentName">Full Name</label>
+      <input type="text" id="studentName" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="studentEmail">Email Address</label>
+      <input type="email" id="studentEmail" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="comments">Your Feedback / Comments</label>
+      <textarea id="comments" rows="5" placeholder="Write your comments here..." required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Feedback</button>
+
+  </form>
+</div>

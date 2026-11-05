@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+</head>
+<body ng-app="CalculatorApp" ng-controller="CalculatorController">
+  <div>
+    <p><input type="number" ng-model="a" placeholder="First number"></p>
+    <p><input type="number" ng-model="b" placeholder="Second number"></p>
+    <p>
+      <select ng-model="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+    </p>
+    <p><strong>Result:</strong> {{ result() }}</p>
+  </div>
+  <script>
+    angular.module('CalculatorApp', [])
+    .controller('CalculatorController', function($scope) {
+      $scope.a = 0;
+      $scope.b = 0;
+      $scope.operator = '+';
+      $scope.result = function() {
+        if ($scope.operator == '+') {
+          return $scope.a + $scope.b;
+        }
+        if ($scope.operator == '-') {
+          return $scope.a - $scope.b;
+        }
+        if ($scope.operator == '*') {
+          return $scope.a * $scope.b;
+        }
+        if ($scope.operator == '/') {
+          return $scope.b !== 0 ? ($scope.a / $scope.b) : 'Cannot divide by zero';
+        }
+      };
+    });
+  </script>
+</body>
+</html>

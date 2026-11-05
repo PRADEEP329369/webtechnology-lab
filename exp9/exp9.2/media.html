@@ -1,0 +1,44 @@
+<style>
+  .media-container h2 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+  }
+  .video-wrapper {
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin-top: 15px;
+  }
+  video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+  .media-info {
+    margin-top: 15px;
+    background: #edf2f7;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+</style>
+
+<div class="media-container">
+  <h2>Course Intro Video</h2>
+  <p>Watch this brief introductory video showcasing modern web development concepts:</p>
+
+  <div class="video-wrapper">
+    <video controls poster="https://via.placeholder.com/600x340/1e3c72/ffffff?text=Web+Tech+Academy">
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="media-info">
+    <strong>Note:</strong> Ensure media controls are active for playback adjustment.
+  </div>
+</div>

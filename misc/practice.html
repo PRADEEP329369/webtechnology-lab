@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+
+    <style>
+        label,input { display:block; margin:8px; }
+        span { color:red; }
+    </style>
+
+    <script>
+        function validate() {
+            let n = document.getElementById("name").value;
+            let p = document.getElementById("password").value;
+
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("passwordError").innerHTML = "";
+
+            if (n == "") {
+                document.getElementById("nameError").innerHTML = "Name is required";
+                return false;
+            }
+
+            if (p == "") {
+                document.getElementById("passwordError").innerHTML = "Password is required";
+                return false;
+            }
+
+            if (p.length < 8) {
+                document.getElementById("passwordError").innerHTML =
+                    "Password must be at least 8 characters";
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+<form action="server.php" method="post" onsubmit="return validate()">
+
+    <label>Name</label>
+    <input type="text" name="name" id="name">
+    <span id="nameError"></span>
+
+    <label>Password</label>
+    <input type="password" name="password" id="password">
+    <span id="passwordError"></span>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>

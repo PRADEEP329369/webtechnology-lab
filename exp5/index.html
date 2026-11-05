@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URK24CS1182 - Shortest and Longest Word</title>
+</head>
+<body>
+<h3>Reg No: URK24CS1182</h3>
+<h2>Find Shortest and Longest Word</h2>
+<input type="text" id="text" value="Web Development Tutorial">
+<button onclick="findWords()">Find</button>
+<p id="result"></p>
+<script>
+function findWords() {
+    let str = document.getElementById("text").value;
+    let words = str.split(" ");
+    let shortest = words[0];
+    let longest = words[0];
+    for (let i = 1; i < words.length; i++) {
+        if (words[i].length < shortest.length) {
+            shortest = words[i];
+        }
+
+        if (words[i].length > longest.length) {
+            longest = words[i];
+        }
+    }
+    document.getElementById("result").innerHTML =
+        "Shortest: '" + shortest + "'<br>" +
+        "Longest: '" + longest + "'";
+}
+</script>
+</body>
+</html>

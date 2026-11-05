@@ -1,0 +1,548 @@
+/* =========================================
+   GENERAL STYLING
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.sample-title {
+    margin: 15px 0 15px 25px;
+    font-family: Georgia, serif;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+    width: 88%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    border: 8px solid transparent;
+
+    /* Border Image */
+    border-image:
+        linear-gradient(
+            45deg,
+            #777777,
+            #222222,
+            #999999
+        ) 1;
+
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    height: 165px;
+
+    /* Multiple Backgrounds */
+
+    background-image:
+
+        radial-gradient(
+            circle at 30% 100%,
+            rgba(255,255,255,0.5),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #155ca8,
+            #347dcc,
+            #2265ad
+        );
+
+    background-size:
+        400px 200px,
+        100% 100%;
+
+    background-repeat:
+        no-repeat,
+        no-repeat;
+
+    background-position:
+        left bottom,
+        center;
+
+    position: relative;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+
+.flower,
+.apple {
+
+    width: 55px;
+    height: 65px;
+
+    background-color: white;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+
+    box-shadow:
+        3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.flower {
+    margin-left: 20px;
+}
+
+.apple {
+    margin-left: 55px;
+    margin-top: -10px;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+========================================= */
+
+.navbar {
+
+    display: flex;
+
+    height: 28px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #999999,
+            #666666
+        );
+}
+
+.navbar a {
+
+    flex: 1;
+
+    text-decoration: none;
+
+    color: #222;
+
+    text-align: center;
+
+    padding: 7px;
+
+    font-size: 11px;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+
+    background-color: #00aa00;
+
+    color: white;
+}
+
+.navbar .active {
+
+    background-color: red;
+
+    color: black;
+}
+
+
+/* =========================================
+   FRUITS SECTION
+========================================= */
+
+.fruits-section {
+
+    height: 150px;
+
+    background-color: pink;
+
+    padding: 4px;
+}
+
+
+/* =========================================
+   FRUIT BOX
+========================================= */
+
+.fruit-box {
+
+    width: 165px;
+
+    margin-left: 130px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Fruit heading */
+
+.fruit-box h3 {
+
+    margin: 0;
+
+    padding: 6px;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    color: black;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #00aa00,
+            #008800
+        );
+}
+
+
+/* Fruit items */
+
+.fruit-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 6px 20px;
+
+    height: 25px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* Alternate rows */
+
+.fruit-item:nth-child(odd) {
+
+    background-color: #8cff00;
+}
+
+.fruit-item:nth-child(even) {
+
+    background-color: #009900;
+
+    color: white;
+}
+
+
+/* Hover */
+
+.fruit-item:hover {
+
+    background-color: orange;
+
+    color: black;
+}
+
+
+/* =========================================
+   LOGIN SECTION
+========================================= */
+
+.login-section {
+
+    min-height: 295px;
+
+    padding: 40px;
+
+    /* Multiple backgrounds */
+
+    background-image:
+
+        radial-gradient(
+            circle at 30% 80%,
+            rgba(255,255,255,0.15),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #222222,
+            #555555,
+            #222222
+        );
+
+    background-size:
+        400px 300px,
+        100% 100%;
+
+    background-repeat:
+        no-repeat,
+        no-repeat;
+}
+
+
+/* =========================================
+   FORMS CONTAINER
+========================================= */
+
+.forms-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   FORM BOX
+========================================= */
+
+.form-box {
+
+    width: 190px;
+
+    background-color: white;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Form heading */
+
+.form-box h2 {
+
+    text-align: center;
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   LABELS
+========================================= */
+
+.form-box label {
+
+    display: block;
+
+    margin-top: 7px;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.form-box input {
+
+    width: 100%;
+
+    padding: 7px;
+
+    margin-top: 4px;
+
+    border: none;
+
+    background-color: #dddddd;
+
+    font-size: 9px;
+
+    outline: none;
+}
+
+
+/* Focus */
+
+.form-box input:focus {
+
+    border: 2px solid blue;
+
+    background-color: white;
+}
+
+
+/* Required */
+
+.form-box input:required {
+
+    border-left: 3px solid blue;
+}
+
+
+/* Invalid email */
+
+.form-box input[type="email"]:invalid {
+
+    border-right: 3px solid red;
+}
+
+
+/* Valid email */
+
+.form-box input[type="email"]:valid {
+
+    border-right: 3px solid green;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.form-box button {
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 7px;
+
+    border: none;
+
+    border-radius: 3px;
+
+    background:
+        linear-gradient(
+            to right,
+            #0066ff,
+            #0077ee
+        );
+
+    color: white;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Button hover */
+
+.form-box button:hover {
+
+    background:
+        linear-gradient(
+            to right,
+            #00aa00,
+            #00dd44
+        );
+
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background:
+        linear-gradient(
+            to right,
+            #ffe0b2,
+            #ffedcc
+        );
+
+    padding: 10px 15px;
+
+    font-style: italic;
+}
+
+
+/* Footer heading */
+
+footer h3 {
+
+    margin: 0 0 10px 0;
+
+    font-size: 14px;
+}
+
+
+/* Footer paragraph */
+
+footer p {
+
+    margin: 0;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media screen and (max-width: 700px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .forms-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fruit-box {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbar a {
+        padding: 8px;
+    }
+}

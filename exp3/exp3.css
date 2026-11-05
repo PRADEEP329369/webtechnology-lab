@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef2f7;
+    color:#333;
+}
+header{
+    background:linear-gradient(90deg,#0077cc,#00b4d8);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+header h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+header p{
+    font-size:18px;
+}
+nav{
+    background:#222;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px 25px;
+    transition:.3s;
+}
+nav a:hover{
+    background:#00b4d8;
+}
+.hero{
+    text-align:center;
+    padding:40px;
+    background:white;
+}
+.hero h2{
+    color:#0077cc;
+    margin-bottom:15px;
+}
+.container{
+    width:90%;
+    margin:30px auto;
+    display:flex;
+    gap:20px;
+}
+main{
+    flex:3;
+}
+aside{
+    flex:1;
+}
+.card{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+.card h2{
+    color:#0077cc;
+    margin-bottom:15px;
+}
+.card p{
+    text-align:justify;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+.card ul{
+    padding-left:20px;
+}
+.card li{
+    margin-bottom:10px;
+}
+.feature-box{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.feature{
+    flex:1;
+    min-width:150px;
+    background:#0077cc;
+    color:white;
+    text-align:center;
+    padding:20px;
+    border-radius:10px;
+    transition:.3s;
+}
+.feature:hover{
+    background:#00b4d8;
+    transform:translateY(-5px);
+}
+aside a{
+    display:block;
+    padding:10px;
+    margin:10px 0;
+    background:#0077cc;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    text-align:center;
+}
+aside a:hover{
+    background:#00b4d8;
+}
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+@media(max-width:768px){
+.container{
+    flex-direction:column;
+}
+.feature-box{
+    flex-direction:column;
+}
+nav{
+    flex-direction:column;
+}
+nav a{
+    border-top:1px solid gray;
+}
+}

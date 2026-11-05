@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Addition</title>
+    <script src="jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btn").click(function() {
+                let n1 = parseInt($("#n1").val());
+                let n2 = parseInt($("#n2").val());
+                let sum = n1 + n2;
+                $("#output").html("Sum is: " + sum);
+                $("#output").css("color", "blue");
+            });
+        });
+    </script>
+</head>
+<body>
+    <label for="n1">Number 1:</label>
+    <input type="number" id="n1">
+    <br><br>
+    <label for="n2">Number 2:</label>
+    <input type="number" id="n2">
+    <br><br>
+    <button id="btn">Add</button>
+    <div id="output"></div>
+</body>
+</html>

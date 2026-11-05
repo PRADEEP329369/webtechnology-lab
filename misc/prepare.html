@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form>
+
+<fieldset>
+<legend>Personal Information</legend>
+
+Full Name:<br>
+<input type="text"><br><br>
+
+Register Number:<br>
+<input type="text" pattern="URK23CS[0-9]{3}"><br><br>
+
+Email:<br>
+<input type="email"><br><br>
+
+Password:<br>
+<input type="password"><br><br>
+
+Date of Birth:<br>
+<input type="date"><br><br>
+
+Age:<br>
+<input type="number" min="17" max="21"><br><br>
+
+Preferred Time:<br>
+<input type="time">
+
+</fieldset>
+
+<fieldset>
+<legend>Academic Information</legend>
+
+Department:<br>
+<select>
+    <option>Computer Science</option>
+    <option>Information Technology</option>
+</select><br><br>
+
+Gender:<br>
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+<input type="radio" name="gender"> Other
+<br><br>
+
+Skills:<br>
+<input type="checkbox"> HTML
+<input type="checkbox"> CSS
+<input type="checkbox"> JavaScript
+<input type="checkbox"> Python
+
+</fieldset>
+
+<fieldset>
+<legend>Additional Information</legend>
+
+Upload Resume:<br>
+<input type="file"><br><br>
+
+Portfolio:<br>
+<input type="url"><br><br>
+
+Favorite Color:<br>
+<input type="color">
+
+</fieldset>
+
+<br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>
